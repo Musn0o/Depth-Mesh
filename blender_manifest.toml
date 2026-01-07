@@ -1,0 +1,19 @@
+schema_version = "1.0.0"
+id = "depth_mesh_generator"
+version = "0.1.1"
+name = "Depth Mesh Generator"
+tagline = "Generate a displaced mesh from a depth map image"
+maintainer = "Scar <askarmoustafa@yahoo.com>"
+type = "add-on"
+license = [
+    "GPL-2.0-or-later",
+]
+
+# Supported Blender versions
+blender_version_min = "4.2.0"
+
+website = "https://github.com/scar/depth_mesh_generator"
+
+[permissions]
+# Required because the addon reads files from the disk
+files = "Read access to depth map images"
