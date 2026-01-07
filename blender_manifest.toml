@@ -12,7 +12,7 @@ license = [
 # Supported Blender versions
 blender_version_min = "4.2.0"
 
-website = "https://github.com/scar/depth_mesh_generator"
+website = "https://github.com/Musn0o/Depth-Mesh"
 
 [permissions]
 # Required because the addon reads files from the disk
