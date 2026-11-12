@@ -1,6 +1,31 @@
 # Depth Mesh Generator
 
+**Blender add-on that turns images into 3D meshes using AI depth estimation** — Python, Blender API, ONNX.
+
 Depth Mesh Generator is a Blender add-on that uses AI to transform images into 3D models by generating a depth map and applying it as a displacement to a subdivided plane.
+
+## Projektüberblick (DE)
+
+Das Add-on erzeugt aus einem einzelnen Bild eine Tiefenkarte und daraus ein
+3D-Mesh in Blender. Es lädt das Depth-Anything-ONNX-Modell, erstellt eine
+unterteilte Ebene, wendet die Tiefenkarte als Displacement an und richtet die
+UV-Zuordnung für die Originaltextur ein. Die Installation der
+Python-Abhängigkeiten und des Modells erfolgt direkt aus der Blender-Oberfläche.
+
+**Technischer Fokus:** Blender-Add-on-Entwicklung, ONNX-Inference,
+automatische Geometrieerzeugung und robuste Dependency-Installation.
+
+## Architektur
+
+```mermaid
+flowchart LR
+    I[Image] --> D[Depth Anything ONNX]
+    D --> M[Depth Map]
+    M --> G[Subdivided Plane + Displacement]
+    G --> O[3D Mesh with UV Texture]
+    U[Blender UI] --> D
+    U --> G
+```
 
 ## Features
 - **AI-Powered Depth Generation**: Uses the "Depth Anything" ONNX model for high-quality depth estimation.
